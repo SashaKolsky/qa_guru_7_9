@@ -23,7 +23,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static java.time.format.DateTimeFormatter.ofPattern;
 
-public class StudentRegistrationFormTest {
+public class StudentRegistrationFormTest extends TestBase {
     private static final List<String> GENDER_LIST = Arrays.asList("Male", "Female", "Other");
     private static final List<String> SUBJECTS_LIST = Arrays.asList("Computer Science", "Physics", "Maths");
     private static final List<String> HOBBIES_LIST = Arrays.asList("Sports", "Reading", "Music");
