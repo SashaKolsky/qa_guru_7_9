@@ -17,6 +17,7 @@ public class TestBase {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
@@ -25,9 +26,11 @@ public class TestBase {
 
     @AfterEach
     public void tearDown() {
+
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
+        Attach.addVideo(Attach.getSessionId());
     }
 
 }
